@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="mahatmalogo">
+                <img src="/static/images/mahatmapng.png" alt="" height="50px">
+            </div>
+            <div class="ntalogo">
+                <img src="/static/images/NTA_logo.png" alt="" height="50px">
+            </div>
+            <div class="moelogo">
+                <img src="/static/images/moe1.png" alt="" height="50px">
+            </div>
+            <div class="azadilogo">
+                <img src="/static/images/akam.png" alt="" height="50px">
+            </div>
+        </div>
+        <div class="bottomnav">
+            <div class="infohead">
+                <div class="container">
+                    <div class="imgcontainer">
+                        <img src="/static/images/user-large-solid.svg" alt="" </div>
+                    </div>
+                    <div class="candidateinfo">
+                        <table>
+                            <tr>
+                                <th>Candidate Name :</th>
+                                <td>{{username}}</td>
+                            </tr>
+                            <tr>
+                                <th>Exam Name :</th>
+                                <td>{{examtype}}</td>
+                            </tr>
+                            <tr>
+                                <th>Time Remaining :</th>
+                                <td>TAKE YOUR TIME</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="language">
+                        <select name="language" id="">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+    </header>
+    <main>
+        <div class="mainContainer">
+            <div class="questionBox" style="width: 90%;background-color: white;">
+                <div class="question"
+                    style="background-color: rgb(229 229 229 / 32%);border:solid #8d8d8dd6 1px; padding: 5px; margin-right: 30px;">
+                    <div class="questionnumber">
+                        <h3>QUESTION </h3>
+                    </div>
+                    <div class="actualquestion">
+                        {% for c in ques %}
+                        <form action="/test/result" method="post">
+                            {% csrf_token %}
+                            <div style="font-size:18px;">
+                                {% if c.QuestionText in " " %}
+                                <div>
+                                    {{c.QuestionImg}}
+                                </div>
+                                {% else %}
+                                <p>Q. {{c.QuestionText}}</p>
+                                {% endif %}
+                            </div>
+                            {% if c.Option1Text not in " " %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option1Text}}">{{c.Option1Text}}
+                            </div>
+                            {% else %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option1Img}}">OPTION 1<img src="/{{c.Option1Img}}" alt="option1">
+                            </div>
+                            {% endif %}
+                            {% if c.Option2Text not in " " %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option2Text}}">{{c.Option2Text}}
+                            </div>
+                            {% else %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option2Img}}">OPTION 2<img src="/{{c.Option2Img}}" alt="option2">
+                            </div>
+                            {% endif %}
+                            {% if c.Option3Text not in " " %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option3Text}}">{{c.Option3Text}}
+                            </div>
+                            {% else %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option3Img}}">OPTION 3<img src="/{{c.Option3Img}}" alt="option3">
+                            </div>
+                            {% endif %}
+                            {% if c.Option4Text not in " " %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option4Text}}">{{c.Option4Text}}
+                            </div>
+                            {% else %}
+                            <div class="options" style="margin-top: 10px;">
+                                <input type="radio" name="{{c.id}}" id="" value="{{c.Option4Img}}">OPTION 4
+                                <img src="/{{c.Option4Img}}" alt="option4">
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+
+                    </div>
+                </div>
+                <div class="submitoptions">
+                    <button type="reset"
+                        style="height: 50px;width: 480px;background-color: rgb(0, 0, 0); margin: 10px; border-radius: 5px; color: rgb(255, 255, 255); margin-right: 10px;">CLEAR</button>
+                    <button type="submit"
+                        style="height: 50px;width: 480px;background-color: green; margin: 10px; border-radius: 5px; color: white; margin-right: 30px;">SUBMIT</button>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copyrightnta">
+            &copy; all right reserved-national test agency
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:#fb8500;
+    /* background-image: url(mainbg.png);
+    background-size:cover; */
+    /* background-repeat: repeat-x; */
+}
+nav ul{
+    height: 50px;
+    background-color:#219ebc;
+    display: flex;
+    justify-content:flex-end ;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.navlinks{
+    text-decoration: none;
+    color: white;
+    
+}
+.navlinks:hover{
+    /* text-decoration: none; */
+    color: rgb(255, 217, 0);
+}
+nav li{
+    list-style: none;
+    margin-right: 80px;
+}
+#HomeLogo{
+    height: 40px;
+    width: 140px;
+    margin-right: 640px;
+}
+.bannerbox{
+    margin-top: 20px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/static/homeimgs/andi-rieger-vfEqA8sKe6A-unsplash.jpg);
+    background-size:contain;
+}
+
+
+.bannercontainer{
+    animation:banner 15s ease-in-out infinite alternate;
+    height: 80%;
+    width: 90%;
+    border:dotted whitesmoke 1px;
+    border-radius: 8px;
+    background-image: url(/static/homeimgs/andi-rieger-vfEqA8sKe6A-unsplash.jpg);
+    background-size:cover;
+    background-position: 2px ;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testtype{
+    height: 300px;
+    width: 100%;
+    /* background-color: green; */
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.test{
+    height: 90%;
+    /* background-color: blue; */
+    /* background-image: url(erol-ahmed-wKTF65TcReY-unsplash.jpg); */
+    background-color: #3DC2EC ;
+    border: solid #4B70F5;
+    border-radius:8px;
+    padding: 20px;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+@keyframes testani{
+    from{height: 95%;}
+    to{height: 90%;}
+
+}
+.test:hover{
+    animation: testani 0.15s ease-in 1  ;
+}
+.test h1{
+    text-decoration:underline;
+    color: black;
+}
+.quotebox{
+    height: 300px;
+    /* background-color: rgb(226, 226, 17); */
+    background-image: url(/static/homeimgs/mainbg.png);
+    margin-bottom: 40px;
+    font-family:cursive;
+    font-size: 2em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 5px;
+    border: solid #281800;
+    border-radius:  8px;
+}
+.quotebox div{
+    width: 80%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upper{
+    height: 50px;
+    background-color: #ffb703;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.lower{
+    height: 200px;
+    background-color: #023047;
+}
+.starttest{
+    height: 50px;
+    background-color:#4B70F5;
+    position:relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.starttest a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.starttest a:hover{
+    color:#3DC2EC;
+}
+.upper li {
+    margin-left:20px;
+    list-style: none;
+}
+.upper img{
+    height: 20px;
+    width: 20px;
+}
+.arrow img{
+    object-fit:fill;
+    height: 120px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+} 
+.hide{
+    display: none;
+}
+.upper li:hover + .hide{
+    display: inl;
+}

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+
+}
+
+.mahatmalogo {
+    margin-left: 20px;
+}
+
+.ntalogo {
+    margin-left: 100px;
+}
+
+.moelogo {
+    margin-left: 80px;
+    padding-left: 15px;
+    border-left: 3px solid black;
+}
+
+.azadilogo {
+    margin-left: 100px;
+
+}
+
+.infohead {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    /* background-color: rgb(208, 233, 255); */
+}
+
+.imgcontainer {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(maths.jfif);
+
+}
+
+.candidateinfo table {
+    text-align: left;
+}
+
+.language select {
+    height: 30px;
+    width: 250px;
+    margin-left: 400px;
+}
+
+.candidateinfo table tr td {
+    color: rgb(255, 115, 0);
+    text-transform: capitalize;
+}
+main > h3:first-child{
+    text-align: center;
+}
+main div {
+    /* background-color: red; */
+    width: 80%;
+    margin: auto;
+
+}
+main h3{
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+ul li{
+    list-style-position:inside;
+}
+main li{
+    font-size: 15px;
+    line-height: 20PX;
+}
+form{
+    padding: 10px;
+}
+form legend
+{
+    padding: 10px;
+}
+form label{
+    padding: 20px;
+}
+form select{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+form button{
+    background-color: green;
+    width: 80em;
+    height: 50px;
+    color: white;
+
+}

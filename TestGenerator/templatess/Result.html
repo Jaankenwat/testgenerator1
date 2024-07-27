@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+    <link rel="stylesheet" href="/static/css/ResultStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <img id="HomeLogo" src="" alt="" style="position: relative; left: 170px;">
+                    </li>
+                    <img src="/static/homeimgs/house-solid.svg" alt="" style="height: 15px; margin-right: 5px;">
+                    <li>
+                        <a href="" class="navlinks">Home</a>
+                    </li>
+                    <img src="/static/homeimgs/user-solid.svg" alt="" style="height: 15px; margin-right: 5px;">
+                    <li>
+                        <a href="" class="navlinks">About</a>
+                    </li>
+                    <img src="/static/homeimgs/envelope-solid.svg" alt="" style="height: 15px; margin-right: 5px;">
+                    <li>
+                        <a href="" class="navlinks">FeedBack</a>
+                    </li>
+                    <img src="/static/homeimgs/phone-solid.svg" alt="" style="height: 15px; margin-right: 5px;">
+                    <li>
+                        <a href="" class="navlinks">Support</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mainscore">
+                <h2 style="font-family: cursive; margin-top: 10px;">YOUR SCORE CARD</h2>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Physics</th>
+                        <th>Chemistry</th>
+                        <th>Maths</th>
+                        <th>Total</th>
+                    </thead>
+                    <tr>
+                        <th>Total Questions</th>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <th>Attempted</th>
+                        <td>{{PhyAttempedQuestions}}</td>
+                        <td>{{ChemAttempedQuestions}}</td>
+                        <td>null</td>
+                        <td>{{AttempedQuestions}}</td>
+                    </tr>
+                    <tr>
+                        <th>Dropped Question</th>
+                        <td>{{PhyDroppedQuestion}}</td>
+                        <td>{{ChemDroppedQuestion}}</td>
+                        <td>null</td>
+                        <td>{{DroppedQuestion}}</td>
+                    </tr>
+                    <tr>
+                        <th>Correct Answer</th>
+                        <td>{{PhyCorrectAnswer}}</td>
+                        <td>{{ChemCorrectAnswer}}</td>
+                        <td>null</td>
+                        <td>{{CorrectAnswer}}</td>
+                    </tr>
+                    <tr>
+                        <th>Score</th>
+                        <td>{{PhyTotalScore}}</td>
+                        <td>{{ChemTotalScore}}</td>
+                        <td>null</td>
+                        <td><b>{{TotalScore}}</b></td>
+                    </tr>
+                </table>
+                <div id="redirecthome">
+                    <a href="">Wanna Re-Test</a>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
